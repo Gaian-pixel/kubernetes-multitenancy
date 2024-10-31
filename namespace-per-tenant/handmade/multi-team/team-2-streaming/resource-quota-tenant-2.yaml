@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-limit-tenant-2
+  namespace: streaming
+spec:
+  hard:
+    limits.cpu: 7
+    limits.memory: 7Gi
+    requests.cpu: 1
+    requests.memory: 1Gi

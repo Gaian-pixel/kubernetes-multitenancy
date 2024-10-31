@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-limit-tenant-1
+  namespace: e-commerce
+spec:
+  hard:
+    limits.cpu: 3
+    limits.memory: 3Gi
+    requests.cpu: 1
+    requests.memory: 1Gi

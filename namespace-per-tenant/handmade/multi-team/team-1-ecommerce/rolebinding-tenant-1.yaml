@@ -1,0 +1,14 @@
+# group-rolebinding-tenant-1.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: tenant-1-rolebinding
+  namespace: e-commerce
+subjects:
+- kind: Group
+  name: tenant-1
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: e-commerce-tenant
+  apiGroup: rbac.authorization.k8s.io

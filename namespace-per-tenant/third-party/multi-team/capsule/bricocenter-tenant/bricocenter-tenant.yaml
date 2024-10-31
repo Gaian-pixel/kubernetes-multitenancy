@@ -1,0 +1,10 @@
+apiVersion: capsule.clastix.io/v1beta2
+kind: Tenant
+metadata:
+  name: bricocenter
+spec:
+  owners:
+  - name: lorenzo
+    kind: User
+  namespaceOptions:
+    quota: 3

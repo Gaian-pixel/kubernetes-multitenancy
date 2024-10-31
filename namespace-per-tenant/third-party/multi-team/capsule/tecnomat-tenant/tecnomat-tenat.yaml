@@ -1,0 +1,8 @@
+apiVersion: capsule.clastix.io/v1beta2
+kind: Tenant
+metadata:
+  name: tecnomat
+spec:
+  owners:
+  - name: lorenzo
+    kind: User

@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: test-network-tenant-1
+  name: test-network-tenant-1
+  namespace: e-commerce
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: test-network-tenant-1
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: test-network-tenant-1
+  name: test-network-tenant-1
+  namespace: e-commerce
+spec:
+  containers:
+  - image: nginx
+    name: test-network-tenant-1
+    ports:
+    - containerPort: 80
+    resources: 
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
